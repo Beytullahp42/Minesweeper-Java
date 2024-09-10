@@ -277,7 +277,7 @@ class Minesweeper {
                 return;
             }
             board[row][col].isRevealed = true;
-            if (board[row][col].minesNearby == 0) {
+            if (board[row][col].minesNearby == 0 && !board[row][col].isMine) {
                 revealSurroundingTiles(row, col);
             }
         }
